@@ -533,7 +533,7 @@ local function TOOLS() -- most of these are made off decompilations of the REAL 
 	local items = script.Parent.items
 	local bvm = items.BootlegVM.opt.Listener
 	local btp = items.BootlegTP.opt.Listener
-	
+
 	bvm.MouseButton1Click:Connect(function()
 		local fakevm = Instance.new("Tool")
 		fakevm.Name = "Bootleg Vertical Mobility"
@@ -569,7 +569,7 @@ local function TOOLS() -- most of these are made off decompilations of the REAL 
 			end)
 		end)()
 	end)
-	
+
 	btp.MouseButton1Click:Connect(function()
 		local fakevm = Instance.new("Tool")
 		fakevm.Name = "Bootleg TPose Animation"
@@ -594,47 +594,45 @@ local function TOOLS() -- most of these are made off decompilations of the REAL 
 	end)
 end
 coroutine.wrap(TOOLS)()
-local function drag()
-	local script = Instance.new('LocalScript', JJGFY)
 
-	local UIS = game:GetService("UserInputService")
-	function dragify(Frame)
-	    dragToggle = nil
-	    local dragSpeed = 0.50
-	    dragInput = nil
-	    dragStart = nil
-	    local dragPos = nil
-	    function updateInput(input)
-	        local Delta = input.Position - dragStart
-	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
-	        Frame.Position = Position
-	    end
-	    Frame.InputBegan:Connect(function(input)
-	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
-	            dragToggle = true
-	            dragStart = input.Position
-	            startPos = Frame.Position
-	            input.Changed:Connect(function()
-	                if input.UserInputState == Enum.UserInputState.End then
-	                    dragToggle = false
-	                end
-	            end)
-	        end
-	    end)
-	    Frame.InputChanged:Connect(function(input)
-	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-	            dragInput = input
-	        end
-	    end)
-	    game:GetService("UserInputService").InputChanged:Connect(function(input)
-	        if input == dragInput and dragToggle then
-	            updateInput(input)
-	        end
-	    end)
+local UIS = game:GetService("UserInputService")
+
+function dragify(Frame)
+	local dragToggle = nil
+	local dragSpeed = 0.50
+	local dragInput = nil
+	local startPos = Frame.Position
+	local dragStart = nil
+	local dragPos = nil
+	local function updateInput(input)
+		local Delta = input.Position - dragStart
+		local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+		Frame.Position = Position
 	end
-	
-	task.spawn(dragify, script.Parent.toolui)
-	task.spawn(dragify, script.Parent.hintui)
-	task.spawn(dragify, script.Parent.mainui)
+	Frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+			dragToggle = true
+			dragStart = input.Position
+			startPos = Frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	Frame.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	game:GetService("UserInputService").InputChanged:Connect(function(input)
+		if input == dragInput and dragToggle then
+			updateInput(input)
+		end
+	end)
 end
-coroutine.wrap(drag)()
+
+task.spawn(dragify, toolui)
+task.spawn(dragify, hintui)
+task.spawn(dragify, mainui)
