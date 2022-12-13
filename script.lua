@@ -1,8 +1,7 @@
--- fuck you
+-- Gui to Lua
+-- Version: 3.2
 
--- making this open source so more scripts appear
--- MAKE THE JTOH EXPLOITS WELL KNOWN
--- uses gui2lua btw
+-- Instances:
 
 local JJGFY = Instance.new("ScreenGui")
 local mainui = Instance.new("Frame")
@@ -30,33 +29,38 @@ local opt_3 = Instance.new("Frame")
 local Text = Instance.new("TextLabel")
 local UICorner_6 = Instance.new("UICorner")
 local Listener = Instance.new("TextButton")
-local hintui = Instance.new("Frame")
+local GetAllPresents22 = Instance.new("Frame")
+local opt_4 = Instance.new("Frame")
 local UICorner_7 = Instance.new("UICorner")
-local bar_2 = Instance.new("Frame")
 local TextLabel_4 = Instance.new("TextLabel")
-local Close = Instance.new("TextButton")
-local TextLabel_5 = Instance.new("TextLabel")
-local toolui = Instance.new("Frame")
+local Listener_2 = Instance.new("TextButton")
+local hintui = Instance.new("Frame")
 local UICorner_8 = Instance.new("UICorner")
-local bar_3 = Instance.new("Frame")
+local bar_2 = Instance.new("Frame")
+local TextLabel_5 = Instance.new("TextLabel")
+local Close = Instance.new("TextButton")
 local TextLabel_6 = Instance.new("TextLabel")
+local toolui = Instance.new("Frame")
+local UICorner_9 = Instance.new("UICorner")
+local bar_3 = Instance.new("Frame")
+local TextLabel_7 = Instance.new("TextLabel")
 local Close_2 = Instance.new("TextButton")
 local items_2 = Instance.new("ScrollingFrame")
 local UIListLayout_2 = Instance.new("UIListLayout")
 local BootlegVM = Instance.new("Frame")
-local opt_4 = Instance.new("Frame")
-local Text_2 = Instance.new("TextLabel")
-local UICorner_9 = Instance.new("UICorner")
-local Listener_2 = Instance.new("TextButton")
-local BootlegTP = Instance.new("Frame")
 local opt_5 = Instance.new("Frame")
-local Text_3 = Instance.new("TextLabel")
+local Text_2 = Instance.new("TextLabel")
 local UICorner_10 = Instance.new("UICorner")
 local Listener_3 = Instance.new("TextButton")
-local note = Instance.new("Frame")
+local BootlegTP = Instance.new("Frame")
 local opt_6 = Instance.new("Frame")
-local Text_4 = Instance.new("TextLabel")
+local Text_3 = Instance.new("TextLabel")
 local UICorner_11 = Instance.new("UICorner")
+local Listener_4 = Instance.new("TextButton")
+local note = Instance.new("Frame")
+local opt_7 = Instance.new("Frame")
+local Text_4 = Instance.new("TextLabel")
+local UICorner_12 = Instance.new("UICorner")
 
 --Properties:
 
@@ -168,6 +172,7 @@ KBGodMode.Name = "KBGodMode"
 KBGodMode.Parent = items
 KBGodMode.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 KBGodMode.BackgroundTransparency = 1.000
+KBGodMode.LayoutOrder = 1
 KBGodMode.Size = UDim2.new(1, -12, 0, 24)
 KBGodMode.Visible = false
 
@@ -207,7 +212,7 @@ ShowExperimental.Name = "ShowExperimental"
 ShowExperimental.Parent = items
 ShowExperimental.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ShowExperimental.BackgroundTransparency = 1.000
-ShowExperimental.LayoutOrder = 1
+ShowExperimental.LayoutOrder = 3
 ShowExperimental.Size = UDim2.new(1, -12, 0, 24)
 
 opt_3.Name = "opt"
@@ -239,6 +244,43 @@ Listener.Text = ""
 Listener.TextColor3 = Color3.fromRGB(0, 0, 0)
 Listener.TextSize = 14.000
 
+GetAllPresents22.Name = "GetAllPresents22"
+GetAllPresents22.Parent = items
+GetAllPresents22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GetAllPresents22.BackgroundTransparency = 1.000
+GetAllPresents22.LayoutOrder = 2
+GetAllPresents22.Size = UDim2.new(1, -12, 0, 24)
+
+opt_4.Name = "opt"
+opt_4.Parent = GetAllPresents22
+opt_4.BackgroundColor3 = Color3.fromRGB(61, 89, 130)
+opt_4.Position = UDim2.new(0.0267379675, 0, 0, 0)
+opt_4.Size = UDim2.new(0.975935757, -12, 0, 24)
+
+UICorner_7.CornerRadius = UDim.new(0, 4)
+UICorner_7.Parent = opt_4
+
+TextLabel_4.Parent = opt_4
+TextLabel_4.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_4.Size = UDim2.new(-0.0226628911, 200, 1, 0)
+TextLabel_4.Font = Enum.Font.Code
+TextLabel_4.Text = "Get All Presents (CE2022)"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextSize = 14.000
+
+Listener_2.Name = "Listener"
+Listener_2.Parent = opt_4
+Listener_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Listener_2.BackgroundTransparency = 1.000
+Listener_2.Size = UDim2.new(1, 0, 1, 0)
+Listener_2.Font = Enum.Font.SourceSans
+Listener_2.Text = ""
+Listener_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Listener_2.TextSize = 14.000
+
 hintui.Name = "hintui"
 hintui.Parent = JJGFY
 hintui.BackgroundColor3 = Color3.fromRGB(40, 36, 76)
@@ -246,7 +288,7 @@ hintui.Position = UDim2.new(0.328320712, 0, 0.273468196, 0)
 hintui.Size = UDim2.new(0, 404, 0, 256)
 hintui.Visible = false
 
-UICorner_7.Parent = hintui
+UICorner_8.Parent = hintui
 
 bar_2.Name = "bar"
 bar_2.Parent = hintui
@@ -255,16 +297,16 @@ bar_2.BorderSizePixel = 0
 bar_2.Position = UDim2.new(0.0222772285, 0, 0.02734375, 0)
 bar_2.Size = UDim2.new(0, 386, 0, 28)
 
-TextLabel_4.Parent = bar_2
-TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_4.BackgroundTransparency = 1.000
-TextLabel_4.Position = UDim2.new(0.025906736, 0, 0, 0)
-TextLabel_4.Size = UDim2.new(0, 241, 0, 28)
-TextLabel_4.Font = Enum.Font.Code
-TextLabel_4.Text = "Module Hint Legend"
-TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_4.TextSize = 14.000
-TextLabel_4.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_5.Parent = bar_2
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.Position = UDim2.new(0.025906736, 0, 0, 0)
+TextLabel_5.Size = UDim2.new(0, 241, 0, 28)
+TextLabel_5.Font = Enum.Font.Code
+TextLabel_5.Text = "Module Hint Legend"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.TextSize = 14.000
+TextLabel_5.TextXAlignment = Enum.TextXAlignment.Left
 
 Close.Name = "Close"
 Close.Parent = bar_2
@@ -277,25 +319,24 @@ Close.Text = "Close"
 Close.TextColor3 = Color3.fromRGB(255, 255, 255)
 Close.TextSize = 14.000
 
-TextLabel_5.Parent = hintui
-TextLabel_5.BackgroundColor3 = Color3.fromRGB(26, 23, 50)
-TextLabel_5.Position = UDim2.new(0.0222772285, 0, 0.16015625, 0)
-TextLabel_5.Size = UDim2.new(0, 386, 0, 207)
-TextLabel_5.Font = Enum.Font.Code
-TextLabel_5.Text = "\"(C)\" = Client-sided only (used for clarification)"
-TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_5.TextSize = 14.000
-TextLabel_5.TextXAlignment = Enum.TextXAlignment.Left
-TextLabel_5.TextYAlignment = Enum.TextYAlignment.Top
+TextLabel_6.Parent = hintui
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(26, 23, 50)
+TextLabel_6.Position = UDim2.new(0.0222772285, 0, 0.16015625, 0)
+TextLabel_6.Size = UDim2.new(0, 386, 0, 207)
+TextLabel_6.Font = Enum.Font.Code
+TextLabel_6.Text = "\"(C)\" = Client-sided only (used for clarification)"
+TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.TextSize = 14.000
+TextLabel_6.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_6.TextYAlignment = Enum.TextYAlignment.Top
 
 toolui.Name = "toolui"
 toolui.Parent = JJGFY
 toolui.BackgroundColor3 = Color3.fromRGB(40, 36, 76)
 toolui.Position = UDim2.new(0.258137763, 0, 0.239477515, 0)
 toolui.Size = UDim2.new(0, 404, 0, 256)
-toolui.Visible = false
 
-UICorner_8.Parent = toolui
+UICorner_9.Parent = toolui
 
 bar_3.Name = "bar"
 bar_3.Parent = toolui
@@ -304,16 +345,16 @@ bar_3.BorderSizePixel = 0
 bar_3.Position = UDim2.new(0.0222772285, 0, 0.02734375, 0)
 bar_3.Size = UDim2.new(0, 386, 0, 28)
 
-TextLabel_6.Parent = bar_3
-TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_6.BackgroundTransparency = 1.000
-TextLabel_6.Position = UDim2.new(0.025906736, 0, 0, 0)
-TextLabel_6.Size = UDim2.new(0, 241, 0, 28)
-TextLabel_6.Font = Enum.Font.Code
-TextLabel_6.Text = "Bootleg Tools"
-TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_6.TextSize = 14.000
-TextLabel_6.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_7.Parent = bar_3
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.Position = UDim2.new(0.025906736, 0, 0, 0)
+TextLabel_7.Size = UDim2.new(0, 241, 0, 28)
+TextLabel_7.Font = Enum.Font.Code
+TextLabel_7.Text = "Bootleg Tools"
+TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.TextSize = 14.000
+TextLabel_7.TextXAlignment = Enum.TextXAlignment.Left
 
 Close_2.Name = "Close"
 Close_2.Parent = bar_3
@@ -346,14 +387,14 @@ BootlegVM.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 BootlegVM.BackgroundTransparency = 1.000
 BootlegVM.Size = UDim2.new(1, -12, 0, 24)
 
-opt_4.Name = "opt"
-opt_4.Parent = BootlegVM
-opt_4.BackgroundColor3 = Color3.fromRGB(68, 61, 130)
-opt_4.Position = UDim2.new(0.0267379675, 0, 0, 0)
-opt_4.Size = UDim2.new(0.975935757, -12, 0, 24)
+opt_5.Name = "opt"
+opt_5.Parent = BootlegVM
+opt_5.BackgroundColor3 = Color3.fromRGB(68, 61, 130)
+opt_5.Position = UDim2.new(0.0267379675, 0, 0, 0)
+opt_5.Size = UDim2.new(0.975935757, -12, 0, 24)
 
 Text_2.Name = "Text"
-Text_2.Parent = opt_4
+Text_2.Parent = opt_5
 Text_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Text_2.BackgroundTransparency = 1.000
 Text_2.Position = UDim2.new(0.023, 0, 0, 0)
@@ -363,43 +404,6 @@ Text_2.Text = "Bootleg Vertical Mobility"
 Text_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 Text_2.TextSize = 14.000
 Text_2.TextXAlignment = Enum.TextXAlignment.Left
-
-UICorner_9.CornerRadius = UDim.new(0, 4)
-UICorner_9.Parent = opt_4
-
-Listener_2.Name = "Listener"
-Listener_2.Parent = opt_4
-Listener_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Listener_2.BackgroundTransparency = 1.000
-Listener_2.Size = UDim2.new(1, 0, 1, 0)
-Listener_2.Font = Enum.Font.SourceSans
-Listener_2.Text = ""
-Listener_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-Listener_2.TextSize = 14.000
-
-BootlegTP.Name = "BootlegTP"
-BootlegTP.Parent = items_2
-BootlegTP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-BootlegTP.BackgroundTransparency = 1.000
-BootlegTP.Size = UDim2.new(1, -12, 0, 24)
-
-opt_5.Name = "opt"
-opt_5.Parent = BootlegTP
-opt_5.BackgroundColor3 = Color3.fromRGB(68, 61, 130)
-opt_5.Position = UDim2.new(0.0267379675, 0, 0, 0)
-opt_5.Size = UDim2.new(0.975935757, -12, 0, 24)
-
-Text_3.Name = "Text"
-Text_3.Parent = opt_5
-Text_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Text_3.BackgroundTransparency = 1.000
-Text_3.Position = UDim2.new(0.023, 0, 0, 0)
-Text_3.Size = UDim2.new(0.976999998, 0, 1, 0)
-Text_3.Font = Enum.Font.Code
-Text_3.Text = "Bootleg TPose"
-Text_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-Text_3.TextSize = 14.000
-Text_3.TextXAlignment = Enum.TextXAlignment.Left
 
 UICorner_10.CornerRadius = UDim.new(0, 4)
 UICorner_10.Parent = opt_5
@@ -414,6 +418,43 @@ Listener_3.Text = ""
 Listener_3.TextColor3 = Color3.fromRGB(0, 0, 0)
 Listener_3.TextSize = 14.000
 
+BootlegTP.Name = "BootlegTP"
+BootlegTP.Parent = items_2
+BootlegTP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BootlegTP.BackgroundTransparency = 1.000
+BootlegTP.Size = UDim2.new(1, -12, 0, 24)
+
+opt_6.Name = "opt"
+opt_6.Parent = BootlegTP
+opt_6.BackgroundColor3 = Color3.fromRGB(68, 61, 130)
+opt_6.Position = UDim2.new(0.0267379675, 0, 0, 0)
+opt_6.Size = UDim2.new(0.975935757, -12, 0, 24)
+
+Text_3.Name = "Text"
+Text_3.Parent = opt_6
+Text_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Text_3.BackgroundTransparency = 1.000
+Text_3.Position = UDim2.new(0.023, 0, 0, 0)
+Text_3.Size = UDim2.new(0.976999998, 0, 1, 0)
+Text_3.Font = Enum.Font.Code
+Text_3.Text = "Bootleg TPose"
+Text_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Text_3.TextSize = 14.000
+Text_3.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_11.CornerRadius = UDim.new(0, 4)
+UICorner_11.Parent = opt_6
+
+Listener_4.Name = "Listener"
+Listener_4.Parent = opt_6
+Listener_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Listener_4.BackgroundTransparency = 1.000
+Listener_4.Size = UDim2.new(1, 0, 1, 0)
+Listener_4.Font = Enum.Font.SourceSans
+Listener_4.Text = ""
+Listener_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+Listener_4.TextSize = 14.000
+
 note.Name = "note"
 note.Parent = items_2
 note.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -421,14 +462,14 @@ note.BackgroundTransparency = 1.000
 note.LayoutOrder = 1
 note.Size = UDim2.new(1, -12, 0, 24)
 
-opt_6.Name = "opt"
-opt_6.Parent = note
-opt_6.BackgroundColor3 = Color3.fromRGB(130, 59, 60)
-opt_6.Position = UDim2.new(0.0267379675, 0, 0, 0)
-opt_6.Size = UDim2.new(0.975935757, -12, 0, 24)
+opt_7.Name = "opt"
+opt_7.Parent = note
+opt_7.BackgroundColor3 = Color3.fromRGB(130, 59, 60)
+opt_7.Position = UDim2.new(0.0267379675, 0, 0, 0)
+opt_7.Size = UDim2.new(0.975935757, -12, 0, 24)
 
 Text_4.Name = "Text"
-Text_4.Parent = opt_6
+Text_4.Parent = opt_7
 Text_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Text_4.BackgroundTransparency = 1.000
 Text_4.Position = UDim2.new(0.023, 0, 0, 0)
@@ -439,17 +480,22 @@ Text_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 Text_4.TextSize = 14.000
 Text_4.TextXAlignment = Enum.TextXAlignment.Left
 
-UICorner_11.CornerRadius = UDim.new(0, 4)
-UICorner_11.Parent = opt_6
+UICorner_12.CornerRadius = UDim.new(0, 4)
+UICorner_12.Parent = opt_7
 
 -- Scripts:
 
-local function ControllerScript()
+local function LHLHX_fake_script() -- mainui.Controller 
 	local script = Instance.new('LocalScript', mainui)
 
 	local Player = game:GetService("Players").LocalPlayer
 	local SPS = game:GetService("StarterPlayer").StarterPlayerScripts
 	local SCS = game:GetService("StarterPlayer").StarterCharacterScripts
+	local presents = {
+		"PoHC",
+		"PoFL"
+	}
+	local presentLocation = workspace:WaitForChild("PresentLocations")
 	function unlockfps(bruh)
 		local PGS = Player:WaitForChild("PlayerScripts"):WaitForChild("PlayerScripts"):WaitForChild("Framerate Limiter")
 		local SGS = SPS:WaitForChild("PlayerScripts"):WaitForChild("Framerate Limiter")
@@ -469,6 +515,14 @@ local function ControllerScript()
 		CGS.Disabled = bruh
 		SGS.Disabled = bruh
 	end
+	function getPresents(hrp)
+		for _, present in presents do
+			if presentLocation:FindFirstChild(present) then
+				hrp.CFrame = presentLocation:FindFirstChild(present).CFrame * CFrame.new(0, 3, 0)
+			end
+			task.wait(0.5)
+		end
+	end
 	local items = script.Parent.items
 	local fpscap = items.RemoveFPSCap.opt.Tick
 	local god = items.KBGodMode.opt.Tick
@@ -477,6 +531,7 @@ local function ControllerScript()
 	local tgi = script.Parent.Parent.toolui
 	local hbu = script.Parent.bar.ShowHint
 	local tbu = script.Parent.bar.ShowTools
+	local prs = items.GetAllPresents22.opt.Listener
 	local tickimages = {
 		[true] = "rbxassetid://10700446894",
 		[false] = "rbxassetid://10700447103"
@@ -491,6 +546,10 @@ local function ControllerScript()
 		items.ShowExperimental.Visible = false
 		items.KBGodMode.Visible = true
 	end)
+	prs.MouseButton1Click:Connect(function()
+		local hrp = Character:WaitForChild("HumanoidRootPart")
+		getPresents(hrp)
+	end)
 	hbu.MouseButton1Click:Connect(function()
 		hgi.Visible = true
 	end)
@@ -503,37 +562,37 @@ local function ControllerScript()
 		god.Image = tickimages[not blockingdamage]
 	end)
 end
-coroutine.wrap(ControllerScript)()
-local function c1()
+coroutine.wrap(LHLHX_fake_script)()
+local function NUMVK_fake_script() -- Close.c 
 	local script = Instance.new('LocalScript', Close)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(c1)()
-local function gay_ass_mf()
+coroutine.wrap(NUMVK_fake_script)()
+local function VPUE_fake_script() -- JJGFY.JukeHasNoMaleParentalFigure 
 	local script = Instance.new('LocalScript', JJGFY)
 
 	script.Parent.Name = game:GetService("HttpService"):GenerateGUID()
 	script.Parent.Parent = game:GetService("CoreGui")
 end
-coroutine.wrap(gay_ass_mf)()
-local function c2()
+coroutine.wrap(VPUE_fake_script)()
+local function SHMATD_fake_script() -- Close_2.c 
 	local script = Instance.new('LocalScript', Close_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(c2)()
-local function TOOLS() -- most of these are made off decompilations of the REAL tools
+coroutine.wrap(SHMATD_fake_script)()
+local function OPHL_fake_script() -- toolui.toolControl 
 	local script = Instance.new('LocalScript', toolui)
 
 	local items = script.Parent.items
 	local bvm = items.BootlegVM.opt.Listener
 	local btp = items.BootlegTP.opt.Listener
-
+	
 	bvm.MouseButton1Click:Connect(function()
 		local fakevm = Instance.new("Tool")
 		fakevm.Name = "Bootleg Vertical Mobility"
@@ -569,7 +628,7 @@ local function TOOLS() -- most of these are made off decompilations of the REAL 
 			end)
 		end)()
 	end)
-
+	
 	btp.MouseButton1Click:Connect(function()
 		local fakevm = Instance.new("Tool")
 		fakevm.Name = "Bootleg TPose Animation"
@@ -593,46 +652,49 @@ local function TOOLS() -- most of these are made off decompilations of the REAL 
 		end)()
 	end)
 end
-coroutine.wrap(TOOLS)()
+coroutine.wrap(OPHL_fake_script)()
+local function JQQRSO_fake_script() -- JJGFY.Dragify 
+	local script = Instance.new('LocalScript', JJGFY)
 
-local UIS = game:GetService("UserInputService")
-
-function dragify(Frame)
-	local dragToggle = nil
-	local dragSpeed = 0.50
-	local dragInput = nil
-	local startPos = Frame.Position
-	local dragStart = nil
-	local dragPos = nil
-	local function updateInput(input)
-		local Delta = input.Position - dragStart
-		local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
-		Frame.Position = Position
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+	    local dragToggle = nil
+	    local dragSpeed = 0.50
+	    local dragInput = nil
+	    local dragStart = nil
+		local dragPos = nil
+		local startPos = Frame.Position
+	    local function updateInput(input)
+	        local Delta = input.Position - dragStart
+	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+	        Frame.Position = Position
+	    end
+	    Frame.InputBegan:Connect(function(input)
+	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+	            dragToggle = true
+	            dragStart = input.Position
+	            startPos = Frame.Position
+	            input.Changed:Connect(function()
+	                if input.UserInputState == Enum.UserInputState.End then
+	                    dragToggle = false
+	                end
+	            end)
+	        end
+	    end)
+	    Frame.InputChanged:Connect(function(input)
+	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	            dragInput = input
+	        end
+	    end)
+	    game:GetService("UserInputService").InputChanged:Connect(function(input)
+	        if input == dragInput and dragToggle then
+	            updateInput(input)
+	        end
+	    end)
 	end
-	Frame.InputBegan:Connect(function(input)
-		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
-			dragToggle = true
-			dragStart = input.Position
-			startPos = Frame.Position
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					dragToggle = false
-				end
-			end)
-		end
-	end)
-	Frame.InputChanged:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-			dragInput = input
-		end
-	end)
-	game:GetService("UserInputService").InputChanged:Connect(function(input)
-		if input == dragInput and dragToggle then
-			updateInput(input)
-		end
-	end)
+	
+	task.spawn(dragify, script.Parent.toolui)
+	task.spawn(dragify, script.Parent.hintui)
+	task.spawn(dragify, script.Parent.mainui)
 end
-
-task.spawn(dragify, toolui)
-task.spawn(dragify, hintui)
-task.spawn(dragify, mainui)
+coroutine.wrap(JQQRSO_fake_script)()
